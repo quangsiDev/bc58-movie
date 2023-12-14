@@ -1,7 +1,12 @@
 import "./App.css";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
-  return <div className="text-red-500">hello</div>;
+  return (
+    <>
+      <LoginPage />
+    </>
+  );
 }
 
 export default App;
