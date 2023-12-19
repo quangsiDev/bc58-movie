@@ -1,12 +1,15 @@
 import React from "react";
 import { Button, Checkbox, Form, Input, message } from "antd";
 import { https } from "../../service/api";
+import { useNavigate } from "react-router-dom";
 const FormLogin = () => {
+  let navigate = useNavigate();
   const onFinish = (values) => {
     https
       .post("/api/QuanLyNguoiDung/DangNhap", values)
       .then((res) => {
-        console.log(res);
+        // chuyển hướng user về home sau khi đăng nhập thành công
+        navigate("/");
         message.success("Login success");
       })
       .catch((err) => {
