@@ -18,9 +18,10 @@ export default function ListMovie() {
         console.log(err);
       });
   }, []);
+  // min width : mobie first
   return (
-    <div className="grid grid-cols-5 gap-5">
-      {movieArr.map((item) => {
+    <div className="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
+      {movieArr.slice(0, 20).map((item) => {
         return (
           <Card
             key={item.maPhim}
