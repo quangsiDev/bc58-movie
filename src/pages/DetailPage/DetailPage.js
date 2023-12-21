@@ -4,6 +4,7 @@ import { https } from "../../service/api";
 
 export default function DetailPage() {
   const [detail, setDetail] = useState();
+  console.log("😀 - DetailPage - detail", detail);
   let { maPhim } = useParams();
   useEffect(() => {
     https
@@ -18,8 +19,8 @@ export default function DetailPage() {
   }, []);
   return (
     <div className="container flex items-center space-x-5">
-      <img className="w-1/3 " src={detail.hinhAnh} alt="" />
-      <h1>{detail.tenPhim}</h1>
+      <img className="w-1/3 " src={detail?.hinhAnh} alt="" />
+      <h1>{detail?.tenPhim}</h1>
     </div>
   );
 }
