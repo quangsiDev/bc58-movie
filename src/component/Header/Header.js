@@ -38,11 +38,13 @@ export default function Header() {
     }
   };
   return (
-    <div className="h-20 flex justify-between items-center container">
-      <NavLink to="/">
-        <span className="text-2xl font-medium text-red-400">CyberFlix</span>
-      </NavLink>
-      <div className="space-x-5">{renderMenu()}</div>
+    <div className="shadow-lg shadow-black">
+      <div className="h-20 flex justify-between items-center container ">
+        <NavLink to="/">
+          <span className="text-2xl font-medium text-red-400">CyberFlix</span>
+        </NavLink>
+        <div className="space-x-5">{renderMenu()}</div>
+      </div>
     </div>
   );
 }

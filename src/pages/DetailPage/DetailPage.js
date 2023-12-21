@@ -25,7 +25,7 @@ export default function DetailPage() {
         <h1 className="text-3xl font-medium">{detail?.tenPhim}</h1>
         <p>{detail?.moTa}</p>
         {/* rating antd */}
-        <Rate allowHalf value={detail.danhGia / 2} style={{ color: "green" }} />
+        <Rate allowHalf value={detail?.danhGia / 2} style={{ color: "green" }} />
       </div>
     </div>
   );
