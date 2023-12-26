@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { PacmanLoader } from "react-spinners";
 
 export default function Spinner() {
-  return (
+  let { isLoading } = useSelector((state) => state.spinnerSlice);
+  return isLoading ? (
     <div
       style={{
         width: "100vw",
@@ -20,6 +22,8 @@ export default function Spinner() {
       {/* coolors  */}
       <PacmanLoader size={150} color="#fca311" speedMultiplier={3} />
     </div>
+  ) : (
+    <></>
   );
 }
 

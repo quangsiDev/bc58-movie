@@ -25,7 +25,7 @@ export default function DetailPage() {
   }, []);
   return (
     <div className="container flex items-center space-x-5">
-      {isLoading && <Spinner />}
+      {/* {isLoading && <Spinner />} */}
       <img className="w-64 h-96 rounded shadow-lg shadow-red-600" src={detail?.hinhAnh} alt="" />
       <div className="space-y-5">
         <h1 className="text-3xl font-medium">{detail?.tenPhim}</h1>

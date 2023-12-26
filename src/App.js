@@ -5,11 +5,13 @@ import HomePage from "./pages/HomePage/HomePage";
 import Header from "./component/Header/Header";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import Layout from "./layout/Layout";
+import Spinner from "./component/Spinner/Spinner";
 // git stash
 // git pull
 function App() {
   return (
     <>
+      <Spinner />
       <BrowserRouter>
         {/* <Header /> */}
         <Routes>
