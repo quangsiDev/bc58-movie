@@ -27,3 +27,4 @@ export default function List({ dsPhim }) {
     </div>
   );
 }
+// npm run build

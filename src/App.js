@@ -6,6 +6,7 @@ import Header from "./component/Header/Header";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import Layout from "./layout/Layout";
 import Spinner from "./component/Spinner/Spinner";
+import AdminUserPage from "./pages/AdminUserPage/AdminUserPage";
 // git stash
 // git pull
 function App() {
@@ -15,11 +16,15 @@ function App() {
       <BrowserRouter>
         {/* <Header /> */}
         <Routes>
+          {/* users */}
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<HomePage />} />
 
             <Route path="/detail/:maPhim" element={<DetailPage />} />
           </Route>
+
+          {/* admins */}
+          <Route path="/users" element={<AdminUserPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
