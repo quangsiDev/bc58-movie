@@ -8,6 +8,7 @@ export const fetchUserListAction = createAsyncThunk("fetchUserList", async () =>
 
 const initialState = {
   users: [],
+  isLoading: false,
 };
 
 const adminUserSlice = createSlice({
@@ -17,6 +18,13 @@ const adminUserSlice = createSlice({
   extraReducers: {
     [fetchUserListAction.fulfilled]: (state, action) => {
       state.users = action.payload;
+      state.isLoading = false;
+    },
+    [fetchUserListAction.pending]: (state, action) => {
+      state.isLoading = true;
+    },
+    [fetchUserListAction.rejected]: (state, action) => {
+      state.isLoading = false;
     },
   },
 });
