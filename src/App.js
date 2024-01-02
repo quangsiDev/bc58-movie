@@ -7,6 +7,8 @@ import DetailPage from "./pages/DetailPage/DetailPage";
 import Layout from "./layout/Layout";
 import Spinner from "./component/Spinner/Spinner";
 import AdminUserPage from "./pages/AdminUserPage/AdminUserPage";
+import AdminLayout from "./layout/AdminLayout";
+import SecureGate from "./layout/SecureGate";
 // git stash
 // git pull
 function App() {
@@ -24,7 +26,16 @@ function App() {
           </Route>
 
           {/* admins */}
-          <Route path="/users" element={<AdminUserPage />} />
+          <Route
+            path="/admin"
+            element={
+              <SecureGate>
+                <AdminLayout />
+              </SecureGate>
+            }
+          >
+            <Route path="users" element={<AdminUserPage />} />
+          </Route>
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
