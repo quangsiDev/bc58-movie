@@ -33,3 +33,6 @@ export const {} = adminUserSlice.actions;
 
 export default adminUserSlice.reducer;
 // rxslice
+
+// mac: sudo npm i -g typescript
+// win: npm i -g typescript

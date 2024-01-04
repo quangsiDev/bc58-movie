@@ -9,9 +9,11 @@ import Spinner from "./component/Spinner/Spinner";
 import AdminUserPage from "./pages/AdminUserPage/AdminUserPage";
 import AdminLayout from "./layout/AdminLayout";
 import SecureGate from "./layout/SecureGate";
+import HookPage from "./pages/HookPage/HookPage";
 // git stash
 // git pull
 function App() {
+  // return <HookPage />;
   return (
     <>
       <Spinner />
